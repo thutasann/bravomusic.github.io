@@ -1,0 +1,202 @@
+<!----------------------------------------------------------- HEAD TAG------------------------------------------------>
+<!doctype html>
+<html lang="en">
+<head>
+
+		<link rel="shortcut icon" href="../Media/Bravo.PNG">
+
+		<title>BRAVO | HOME</title>
+
+		<!-- own css -->
+		<link rel="stylesheet" type="text/css" href="../Style/BravoStyle.css">
+
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	    <!-- Aplayer css -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+
+	 
+	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	    <!-- Aplayer Jquery link -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+	  
+
+</head>
+
+
+
+<body>
+
+<!------------------------------------------------------------ MAIN SECTION ---------------------------------->
+<div class="main">
+	<div class="container">
+		<!-- New Release -->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Released Tracks</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="0">
+					<img src="../Media/Bravo.PNG">
+				</a>
+				<h4>Sicko Mode</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="1">
+					<img src="../Media/HITR.PNG">
+				</a>
+				<h4>Highest in the Room</h4>
+				<p>Released Date - 2019</p>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="2">
+					<img src="../Media/keptback.JPG">
+				</a>
+				<h4>Kept Back</h4>
+				<p>Released Date - 2017</p>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster">
+					<img src="../Media/Astroworld.JPEG">
+				</a>
+				<h4>Goosebumps</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			
+		</div>
+
+		<!-- coming soon -->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Coming Soon</h3>
+			</div>
+
+			<div class="col-md-2">
+				<a href="#" class="album-poster">
+					<img src="https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg">
+				</a>
+				<h4>Astroworld</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster">
+					<img src="https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg">
+				</a>
+				<h4>Astroworld</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster">
+					<img src="https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg">
+				</a>
+				<h4>Astroworld</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster">
+					<img src="https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg">
+				</a>
+				<h4>Astroworld</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster">
+					<img src="https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg">
+				</a>
+				<h4>Astroworld</h4>
+				<p>Released Date - 2018</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster">
+					<img src="https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg">
+				</a>
+				<h4>Astroworld</h4>
+				<p>Released Date - 2018</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- player -->
+<div id="aplayer"></div>
+  		
+<script type="text/javascript">
+
+	    	$(".album-poster").on('click', function(e){
+	    		var dataSwitchId = $(this).attr('data-switch');
+	    		console.log(dataSwitchId);
+
+	    		// switch function
+	    		ap.list.switch(dataSwitchId);
+
+	    		ap.play();
+	    		$("#aplayer").addClass('showPlayer');
+	    	});
+
+	    	const ap = new APlayer({
+			    container: document.getElementById('aplayer'),
+			    listFolded: true,
+
+			    audio: [
+			    {
+			        name: 'Sicko Mode',
+			        artist: 'Travis Scott',
+			        url: '../Media/Travis_Scott_-_SICKO_MODE_ft._Drake.mp3',
+			        cover: 'https://miro.medium.com/max/500/1*XBctk0GJ9Qq5zPjk2nhXig.jpeg'
+			    },
+			    {
+			        name: 'Highest in the room',
+			        artist: 'Travis Scott',
+			        url: '../Media/Travis_Scott_-_HIGHEST_IN_THE_ROOM_(Lyrics)(256k).mp3',
+			        cover: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Travis_Scott_-_Highest_in_the_Room.png/220px-Travis_Scott_-_Highest_in_the_Room.png'
+			    },
+			    {
+			        name: 'Kept Back',
+			        artist: 'Gucci Mane',
+			        url: '../Media/Gucci_Mane_-_Kept_Back_feat._Lil_Pump_[Official_Music_Video].mp3',
+			        cover: 'https://elevator-media.imgix.net/2018/08/lil-pump-gucci-mane.jpg?fit=scale&fm=pjpg&h=400&ixlib=php-1.2.1&w=600&wpsize=medium&s=98e038aae7c855b895b1c40c3deb4619'
+			    },
+			    {
+			        name: 'Goosebumps',
+			        artist: 'Travis scott',
+			        url: '../Media/Travis_Scott_-_goosebumps_ft._Kendrick_Lamar(128k).mp3',
+			        cover: 'https://elevator-media.imgix.net/2018/08/lil-pump-gucci-mane.jpg?fit=scale&fm=pjpg&h=400&ixlib=php-1.2.1&w=600&wpsize=medium&s=98e038aae7c855b895b1c40c3deb4619'
+			    },
+			 
+
+			   
+
+			    ]
+			});
+</script>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
